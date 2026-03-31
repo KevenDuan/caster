@@ -887,7 +887,7 @@ class MainWindow(QMainWindow):
             # 【注意：此处读取的就是界面的“障碍次数 (PCS)”，代表下发给 D52 的截至次数】
             val_cutoff = int(self.inputs_params["障碍次数 (PCS)"].text())
             
-            val_obs_h = int(self.inputs_params["障碍高度 (mm)"].text())
+            val_obs_h = float(self.inputs_params["障碍高度 (mm)"].text())
             val_weight = float(self.inputs_params["承载重量 (kg)"].text())
             val_temp = float(self.inputs_params["承载温度 (℃)"].text())
             
@@ -912,8 +912,9 @@ class MainWindow(QMainWindow):
             # builder.add_16bit_int(0)
             builder.add_32bit_int(val_obs_cnt) # 改成32位int
             
-            builder.add_16bit_int(val_obs_h) 
-            builder.add_16bit_int(0) 
+            # builder.add_16bit_int(val_obs_h) 
+            # builder.add_16bit_int(0)
+            builder.add_32bit_float(val_obs_h) # 改成32位float
             
             builder.add_16bit_int(int(val_weight))
             builder.add_16bit_int(0) 
