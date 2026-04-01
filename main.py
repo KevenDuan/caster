@@ -11,7 +11,7 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                              QSizePolicy, QTabWidget, QFileDialog, QSpinBox)
 from PyQt5.QtCore import QTimer, QThread, pyqtSignal, Qt, QSettings
 from PyQt5.QtGui import QPixmap, QFont
-from pymodbus.client.sync import ModbusTcpClient
+from pymodbus.client import ModbusTcpClient
 from pymodbus.payload import BinaryPayloadDecoder, BinaryPayloadBuilder
 from pymodbus.constants import Endian
 
