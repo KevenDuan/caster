@@ -127,6 +127,12 @@
 
 ## 打包教程
 
+```bash
 nuitka --standalone --windows-disable-console --enable-plugin=pyqt5 --include-data-files=jiaolun.png=jiaolun.png main.py
-
+```
 exe同目录下必须包含libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll
+
+带图标打包：
+```bash
+nuitka --standalone --windows-disable-console --windows-icon-from-ico=star.ico --enable-plugin=pyqt5 --include-data-files=jiaolun.png=jiaolun.png main.py
+```
