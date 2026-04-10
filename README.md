@@ -134,5 +134,5 @@ exe同目录下必须包含libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3
 
 带图标打包：
 ```bash
-nuitka --standalone --windows-disable-console --windows-icon-from-ico=logo.ico --enable-plugin=pyqt5 --include-package-data=qfluentwidgets --include-data-files=jiaolun.png=jiaolun.png --include-data-files=star.ico=star.ico main.py
+nuitka --standalone --windows-disable-console --windows-icon-from-ico=star.ico --enable-plugin=pyqt5 --include-package-data=qfluentwidgets --include-data-files=jiaolun.png=jiaolun.png --include-data-files=star.ico=star.ico main.py
 ```
